@@ -1,0 +1,27 @@
+<template>
+    
+    <lightning-card title="List Contact">
+
+        <lightning-layout multiple-rows = "true">
+            
+            <template if:true = {recordTypeId}>
+                <template for:each = {recordTypeId} for:item = "contact">
+
+                    <lightning-layout-item size = "5" key = {contact.Id} padding="around-small"
+                        class = "slds-align_absolute-center">
+                        <div class = "tile">
+                            <div class ="Contact data">
+                                <h1 class="slds-text-heading_medium">Name: {contact.Name}</h1>
+                                <p>Email: {contact.Email}</p>
+                            </div>
+                            <!-- Button to show contact details -->
+                            <lightning-button variant="base" label="Detail" title="Contact Detail" onclick={handleClick} class="slds-m-left_x-small" data-id = {contact.Id}></lightning-button>
+                        </div>
+                    </lightning-layout-item>
+                </template>
+            </template>
+
+        </lightning-layout>
+
+    </lightning-card>
+</template>

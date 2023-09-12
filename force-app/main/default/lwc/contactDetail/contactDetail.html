@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Contact Detail" icon-name="standard:actions_and_buttons">
+        <template if:true={contactData}>
+
+            <lightning-button-icon  icon-name="utility:expand_alt"
+                                    slot="actions"
+                                    onclick={handleNavigateToRecord}>
+                                </lightning-button-icon>
+            <div class = "slds-p-around_small">
+                <p>Name: {contactData.Name}</p>
+                <p>Email: {contactData.Email}</p>
+                <p>Birthdate: {contactData.Birthdate}</p>
+                <p>Phone: {contactData.Phone}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
